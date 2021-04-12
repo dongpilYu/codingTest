@@ -1,17 +1,18 @@
 /*
-    프로그래머스 코딩테스트 연습 > 해시 > 완주하지 못한 선수
+    프로그래머스 코딩테스트 연습 > 해시 > 완주하지 못한 선수 > LV1
+    https://programmers.co.kr/learn/courses/30/lessons/42576
     해시 맵 사용
  */
 
 import java.util.HashMap;
 
-public class hash_1 {
+public class 프로그래머스_해시_완주하지못한선수 {
     public static void main(String[] args){
 
         String[] participant = new String[] {"leo", "kiki", "eden"};
         String[] completion = new String[] {"eden", "kiki"};
 
-        String str = hash_1.solution(participant, completion);
+        String str = 프로그래머스_해시_완주하지못한선수.solution(participant, completion);
         System.out.println(str);
     }
     public static String solution(String[] participant, String[] completion) {
