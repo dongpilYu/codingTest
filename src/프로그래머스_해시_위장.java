@@ -1,10 +1,10 @@
 /*
-    프로그래머스 레벌2 > 해시
+    프로그래머스 레벌2 > 해시 > 위장 > Lv2
     https://programmers.co.kr/learn/courses/30/lessons/42578
  */
 import java.util.HashMap;
 
-public class hash_3 {
+public class 프로그래머스_해시_위장 {
 
     public static int solution(String[][] clothes) {
         int answer = 0;
@@ -37,7 +37,7 @@ public class hash_3 {
 
         };
 
-        int num = hash_3.solution(input);
+        int num = 프로그래머스_해시_위장.solution(input);
         System.out.println(num);
 
     }
