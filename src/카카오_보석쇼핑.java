@@ -1,8 +1,12 @@
+/*
+    카카오 - 보석 쇼핑
+    https://programmers.co.kr/learn/courses/30/lessons/67258
+ */
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class kakao_2020 {
+public class 카카오_보석쇼핑 {
     public static int[] solution(String[] gems){
         HashMap<String, Integer> map1 = new HashMap<String, Integer>();
         for (int i = 0; i < gems.length; i++) {
@@ -86,6 +90,6 @@ public class kakao_2020 {
     }
     public static void main(String[] args) throws IOException {
         String[] arr = {"AA", "AB", "AC", "AA", "AC"};
-        kakao_2020.solution(arr);
+        카카오_보석쇼핑.solution(arr);
     }
 }
