@@ -18,7 +18,14 @@ public class 프로그래머스_해시_베스트앨범 {
     }
     public static void printMap(HashMap<String, ArrayList<Pair>> hm){
         for(Map.Entry<String, ArrayList<Pair>> entry : hm.entrySet()){
-            System.out.println("key: " + entry.getKey() );
+            System.out.println("key: " + entry.getKey());
+            for(int i=0;i<entry.getValue().size();i++)
+                System.out.println("value: " + entry.getValue().get(i).second());
+        }
+    }
+    public static void printMap2(HashMap<String, ArrayList<Pair>> hm){
+        for(Map.Entry<String, ArrayList<Pair>> entry : hm.entrySet()){
+            System.out.println("key: " + entry.getKey());
             for(int i=0;i<entry.getValue().size();i++)
                 System.out.println("value: " + entry.getValue().get(i).second());
         }
@@ -28,7 +35,6 @@ public class 프로그래머스_해시_베스트앨범 {
             System.out.println("key: " + entry.getKey());
         }
     }
-
     public static int[] solution(String[] genres, int[] plays) {
         // array를 list로 변환
         // 1. List<> list = Arrays.stream(array).collect(Collectors.toList());
@@ -38,13 +44,11 @@ public class 프로그래머스_해시_베스트앨범 {
         // 2. Set<> set = new HashSet<>(Arrays.asList());
 
         int[] answer = {};
-        HashMap<String, ArrayList<Pair>> map1 = new HashMap<String, ArrayList<Pair>>();
+        HashMap<String, ArrayList<Pair>> map1 = new HashMap<>();
         for(int i=0;i<genres.length;i++){
             Pair p = new Pair(plays[i], i);
-
-            ArrayList<Pair> arr = new ArrayList<Pair>();
+            ArrayList<Pair> arr = new ArrayList<>();
             arr.add(p);
-            // map1.put(genres[i], map1.getOrDefault(genres[i], arr).add(p));
 
             if(map1.containsKey(genres[i])){
                 ArrayList arr2 = map1.get(genres[i]);
@@ -55,8 +59,6 @@ public class 프로그래머스_해시_베스트앨범 {
                 arr1.add(p);
                 map1.put(genres[i], arr1);
             }
-
-
         }
         Vector<Integer> vec = new Vector<>();
 
