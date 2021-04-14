@@ -18,16 +18,11 @@ public class 프로그래머스_해시_완주하지못한선수 {
     public static String solution(String[] participant, String[] completion) {
         String answer = "";
 
-        HashMap<String, Integer> map1 = new HashMap<String, Integer>();
+        HashMap<String, Integer> map1 = new HashMap<>();
 
-        for(int i=0;i<completion.length;i++){
-            if(map1.containsKey(completion[i])) {
-                map1.put(completion[i], map1.get(completion[i]) + 1);
-            }else{
-                map1.put(completion[i], 1);
-            }
-        }
-        // map1.put(completion[i], map1.getOrDefault(completion[i], 0) + 1); 을 썼으면 더 좋았을 듯
+        for(int i=0;i<completion.length;i++)
+            map1.put(completion[i], map1.getOrDefault(completion[i], 0) + 1);
+
 
         for(int i=0;i<participant.length;i++){
             if(map1.containsKey(participant[i])){
