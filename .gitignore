@@ -79,7 +79,7 @@ crashlytics-build.properties
 
 
 ### node ###
-#kr.wisestone.owl/src/main/webapp/bower_components/
+#kr.wisestone.owl/java/main/webapp/bower_components/
 
 *.log
 
